@@ -1584,7 +1584,7 @@ private:
                                          bih.struct_size()                    +
                                          bfh.struct_size()                    ;
 
-      if (bitmap_file_size != bitmap_logical_size)
+      if (bitmap_file_size < bitmap_logical_size)
       {
          std::cerr << "bitmap_image::load_bitmap() ERROR: bitmap_image - "
                    << "Mismatch between logical and physical sizes of bitmap. "
